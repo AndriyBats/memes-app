@@ -9,13 +9,13 @@ import { Meme } from "@/types";
 import { getOrInitMemes } from "@/src/app/lib/cookie";
 //////////////////////////////////////////////////
 
-export const ListboxWrapper = ({children}: { children: ReactNode }) => (
+const ListboxWrapper = ({children}: { children: ReactNode }) => (
   <div className="w-full border-small px-1 py-2 rounded-small border-default-200 dark:border-default-100 flex flex-col items-center">
     {children}
   </div>
 );
 
-export default function MemeList() {
+export default function ListPage() {
   const [memes, setMemes] = useState<Meme[]>([]);
 
    useEffect(() => {
